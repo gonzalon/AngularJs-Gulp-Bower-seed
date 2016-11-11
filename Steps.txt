@@ -1,0 +1,38 @@
+Pre - requisitos
+Installar nodejs, npm, gulp, bower
+
+Installar nodejs / npm
+
+Installar Gulp
+    npm install gulp --save-dev (--save-dev: Solamente para desarrollo)
+Instalar Bower
+    npm install bower --save-dev
+
+
+1- Crear un nuevo proyecto con Web Storm de Angular Js. O descargar el proyecto Angular-seed.
+2- Installar plugins de Gulp,
+
+    npm install gulp-connect --save-dev
+    npm install gulp-ruby-sass --save-dev
+
+3- Crear un archivo gulpfile.js
+
+    var gulp = require('gulp')
+    var sass = require('gulp-ruby-sass')
+    var connect = require('gulp-connect')
+
+    gulp.task('connect', function () {
+        connect.server({
+            root: 'app',
+            port: 4000
+        })
+    })
+
+Si tenemos en cuenta que nuestro arbol de archivos es algo como
+/Proyecto
+    -app
+        -index.html
+
+Configuramos para que el root de la aplicacion servida sea en 'app'
+
+4- Instalamos las dependencias de bower.json con bower install
